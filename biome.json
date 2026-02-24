@@ -1,0 +1,156 @@
+{
+	"$schema": "https://biomejs.dev/schemas/1.9.3/schema.json",
+	"formatter": {
+		"enabled": true,
+		"formatWithErrors": false,
+		"indentStyle": "tab",
+		"indentWidth": 4,
+		"lineWidth": 100,
+		"lineEnding": "lf"
+	},
+	"organizeImports": {
+		"enabled": true
+	},
+	"linter": {
+		"enabled": true,
+		"rules": {
+			"recommended": true,
+			"suspicious": {
+				"noExplicitAny": "warn",
+				"noNonNullAssertion": "warn"
+			},
+			"style": {
+				"useImportType": "warn",
+				"noUselessElse": "warn"
+			},
+			"correctness": {
+				"noUnusedVariables": "warn",
+				"noUnusedImports": "warn"
+			},
+			"complexity": {
+				"noForEach": "warn"
+			},
+			"a11y": {
+				"noSvgWithoutTitle": "off"
+			}
+		}
+	},
+	"css": {
+		"linter": {
+			"enabled": true,
+			"rules": {
+				"correctness": {
+					"noUnknownPseudoClass": {
+						"level": "warn",
+						"options": {
+							"allowedPseudoClasses": ["global", "host", "slotted"]
+						}
+					},
+					"noUnknownAtRule": {
+						"level": "warn",
+						"options": {
+							"allowedAtRules": [
+								"tailwind",
+								"apply",
+								"layer",
+								"import",
+								"reference",
+								"supports",
+								"keyframes",
+								"mixin",
+								"include",
+								"font-face",
+								"page",
+								"media",
+								"supports",
+								"counter-style",
+								"property",
+								"viewport"
+							]
+						}
+					},
+					"noUnknownTypeSelector": {
+						"level": "warn",
+						"options": {
+							"allowedTypeSelectors": ["global", ":host", ":host", "::slotted"]
+						}
+					}
+				},
+				"nursery": {
+					"useImportType": "off"
+				}
+			}
+		},
+		"formatter": {
+			"enabled": true
+		}
+	},
+	"javascript": {
+		"formatter": {
+			"quoteStyle": "single",
+			"jsxQuoteStyle": "double",
+			"trailingCommas": "all",
+			"semicolons": "asNeeded",
+			"arrowParentheses": "always",
+			"bracketSameLine": false,
+			"bracketSpacing": true,
+			"quoteProperties": "asNeeded"
+		}
+	},
+	"json": {
+		"formatter": {
+			"enabled": true
+		}
+	},
+	"overrides": [
+		{
+			"include": ["**/*.css", "**/*.scss", "**/*.astro"],
+			"css": {
+				"linter": {
+					"rules": {
+						"correctness": {
+							"noUnknownPseudoClass": "off",
+							"noUnknownAtRule": "off",
+							"noUnknownTypeSelector": "off"
+						},
+						"style": {
+							"useImportType": "off"
+						}
+					}
+				}
+			}
+		},
+		{
+			"include": ["**/*.astro"],
+			"javascript": {
+				"linter": {
+					"rules": {
+						"correctness": {
+							"noUnusedVariables": "off",
+							"noUnusedImports": "off"
+						},
+						"suspicious": {
+							"noExplicitAny": "off"
+						}
+					}
+				}
+			}
+		}
+	],
+	"files": {
+			"ignoreUnknown": false,
+			"ignore": [
+				"node_modules/**",
+				"dist/**",
+				".astro/**",
+				"public/**",
+				".pnpm-store/**"
+			]
+	},
+	"vcs": {
+			"enabled": true,
+			"clientKind": "git",
+			"useIgnoreFile": true,
+			"defaultBranch": "master"
+	}
+}

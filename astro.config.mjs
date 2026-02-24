@@ -1,3 +1,8 @@
+import { defineConfig } from 'astro/config'
+
+export default defineConfig({
+  base: 'my-repo',
+})
 import sitemap from "@astrojs/sitemap";
 import svelte, { vitePreprocess } from "@astrojs/svelte";
 import tailwind from "@astrojs/tailwind";

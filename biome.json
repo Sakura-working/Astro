@@ -10,26 +10,22 @@
 		{
 			"includes": ["**/*.css", "**/*.scss", "**/*.astro"],
 			"css": {
-				"linter": {
-						"correctness": {
-								"noUnknownPseudoClass": "off",
-								"noUnknownAtRule": "off",
-								"noUnknownTypeSelector": "off"
-						}
+				"correctness": {
+						"noUnknownPseudoClass": "off",
+						"noUnknownAtRule": "off",
+						"noUnknownTypeSelector": "off"
 				}
 			}
 		},
 		{
 			"includes": ["**/*.astro"],
 			"javascript": {
-				"linter": {
-						"correctness": {
-								"noUnusedVariables": "off",
-								"noUnusedImports": "off"
-						},
-						"suspicious": {
-								"noExplicitAny": "off"
-						}
+				"correctness": {
+						"noUnusedVariables": "off",
+						"noUnusedImports": "off"
+				},
+				"suspicious": {
+						"noExplicitAny": "off"
 				}
 			}
 		}
@@ -55,6 +51,13 @@
 						"noSvgWithoutTitle": "off"
 					}
 			}
+	},
+	"css": {
+			"correctness": {
+						"noUnknownPseudoClass": "off",
+						"noUnknownAtRule": "off",
+						"noUnknownTypeSelector": "off"
+				}
 	},
 	"formatter": {
 			"enabled": true,
